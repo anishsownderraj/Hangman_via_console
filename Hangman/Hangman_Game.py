@@ -1,17 +1,25 @@
 # Module for GUI
+from tkinter import *
+from PIL import Image, ImageTk
 import tkinter as Tkr
-# Module that generates a random word inside a list
-# from random_word import RandomWords as random_words
-
 
 
 class WelcomePage(object):
 
-    def __init__ (self, main_window, HEIGHT, WIDTH):
-        canvas = Tkr.Canvas(main_window, height=HEIGHT, width=WIDTH)
-        canvas.pack()
+	def __init__ (self, main_window, HEIGHT, WIDTH):
+		canvas = Tkr.Canvas(main_window, height=HEIGHT, width=WIDTH)
+		canvas.pack()
 
+		# IMAGE
+		background_image = ImageTk.PhotoImage(file = 'WildWest.jpg')
+		background_label = Tkr.Label(main_window, image=background_image)
+		background_label.image = background_image
+		background_label.place(relx=0, rely=0, relwidth=1,relheight=1,anchor= NW)
 
+		# BUTTON
+		button = Tkr.Button(main_window, text = "Start Game!", font=50)
+		button.pack()
+		# lace(anchor=N, relwidth= 0.15, relheight = 0.15 )
 
 
 # Instatiating a window, and keeping it displaying
