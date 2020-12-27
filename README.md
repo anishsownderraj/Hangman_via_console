@@ -1,1 +1,1 @@
-# Hangman_via_console
+# Hangman-via-console
